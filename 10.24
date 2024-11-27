@@ -1,0 +1,21 @@
+#include <iostream>
+#include <regex>
+#include <string>
+using namespace std;
+
+int main() {
+
+regex pattern(".*\\d.*");
+string line;
+
+cout << "Введіть рядки" << endl;
+
+while (getline(cin, line)) {
+    if (regex_match(line, pattern)) {
+        cout << "Рядок містить хоча б одну цифру " << line << endl;
+    } else {
+    cout << "Рядок не містить цифр" << endl;
+    }
+}
+
+}
